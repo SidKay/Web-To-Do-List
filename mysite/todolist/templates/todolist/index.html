@@ -1,0 +1,13 @@
+{% if tdlists %}
+	<ul>
+		{% for list in tdlists %}
+			<li>
+				<a href="{% url 'todolist:display-list' list.id %}">{{ list }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<p>
+		No lists are available. You will be able to create one soon though.
+	</p>
+{% endif %}

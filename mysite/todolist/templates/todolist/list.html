@@ -1,0 +1,8 @@
+<h1>{{ tdlist.list_name }}</h1>
+<ul>
+	{% for task in tdlist.task_set.all %}
+		<li>
+			{{ task }}
+		</li>
+	{% endfor %}
+</ul>
